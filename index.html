@@ -8,117 +8,117 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- CSS SAMA MACAM SEBELUM NI --- */
+        /* --- CSS GLOBAL --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background-color: #f9fbfd; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
         a { text-decoration: none; }
 
-        /* HEADER */
-        .header { background-color: #0d3b66; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        .logo h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
-        .nav a { color: #ffffff; margin-left: 20px; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
-        .nav a:hover { color: #f4d35e; }
-
-        /* HERO */
-        .hero {
-            /* Background Laut / Ikan Segar */
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1534604973900-65e56e2c990a?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover; background-position: center; height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px;
+        /* --- HEADER --- */
+        .header {
+            background-color: #004e92; /* Biru Laut Deep */
+            color: white;
+            padding: 1rem 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: sticky; top: 0; z-index: 100;
         }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; }
-        .btn-main { background-color: #ee964b; color: white; padding: 15px 40px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(238, 150, 75, 0.4); transition: transform 0.3s, background-color 0.3s; }
-        .btn-main:hover { background-color: #e08335; transform: translateY(-3px); }
+        .logo h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
+        .nav a { color: white; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        .nav a:hover { color: #f2c94c; }
 
-        /* FEATURES */
-        .features { display: flex; justify-content: center; gap: 30px; padding: 80px 5%; background: white; flex-wrap: wrap; }
-        .feature-box { flex: 1; min-width: 250px; text-align: center; padding: 30px; border-radius: 15px; background: #f0f4f8; transition: transform 0.3s; }
-        .feature-box:hover { transform: translateY(-5px); }
-        .feature-box h3 { color: #0d3b66; margin-bottom: 10px; }
+        /* --- HERO SECTION --- */
+        .hero {
+            /* Background Laut */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://upload.wikimedia.org/wikipedia/commons/6/67/Ocean_waves.jpg');
+            background-size: cover; background-position: center;
+            height: 70vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            color: white; padding: 20px;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
+        .btn-main { background-color: #f2994a; color: white; padding: 12px 35px; border-radius: 30px; font-weight: bold; font-size: 1.1rem; transition: 0.3s; }
+        .btn-main:hover { background-color: #e67e22; transform: scale(1.05); }
 
-        /* PRODUCTS */
-        .products { padding: 80px 10%; text-align: center; }
-        .products h2 { color: #0d3b66; margin-bottom: 50px; font-size: 2.2rem; }
-        .product-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-        .product-card { background: white; border-radius: 15px; overflow: hidden; width: 350px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); transition: box-shadow 0.3s; text-align: left; }
-        .product-card:hover { box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; }
-        .card-content { padding: 25px; }
-        .card-content h3 { color: #333; margin-bottom: 10px; }
-        .card-content .price { color: #ee964b; font-weight: 700; font-size: 1.2rem; display: block; margin-bottom: 15px; }
-        .btn-card { display: block; text-align: center; background-color: #0d3b66; color: white; padding: 10px; border-radius: 8px; font-weight: 500; }
-        .btn-card:hover { background-color: #082d4f; }
+        /* --- PRODUCTS --- */
+        .products { padding: 60px 10%; text-align: center; }
+        .products h2 { color: #004e92; margin-bottom: 40px; font-size: 2.2rem; }
+        .product-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        
+        .product-card {
+            background: white; border-radius: 12px; overflow: hidden;
+            width: 320px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        .product-card:hover { transform: translateY(-10px); }
+        
+        /* Setting Gambar supaya cantik & seragam */
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover; /* Ini pastikan gambar tak terpenyet walaupun saiz asal lain-lain */
+        }
 
-        /* FOOTER */
-        footer { background-color: #1a1a1a; color: #888; text-align: center; padding: 40px 20px; font-size: 0.9rem; }
+        .card-content { padding: 20px; text-align: left; }
+        .price { color: #d35400; font-weight: 700; font-size: 1.2rem; display: block; margin: 10px 0; }
+        .btn-card { display: block; text-align: center; background-color: #004e92; color: white; padding: 10px; border-radius: 6px; font-weight: 600; margin-top: 15px; }
+        .btn-card:hover { background-color: #003366; }
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .nav { display: none; } .features { flex-direction: column; } .product-card { width: 100%; } }
+        /* --- FOOTER --- */
+        footer { background-color: #222; color: #aaa; text-align: center; padding: 30px 20px; margin-top: 50px; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) { .nav { display: none; } .hero h1 { font-size: 2rem; } .product-card { width: 100%; } }
     </style>
 </head>
 <body>
 
     <header class="header">
-        <div class="logo"><h2>SIAKAP<span style="color:#ee964b">EXPRESS</span></h2></div>
+        <div class="logo"><h2>SIAKAP<span style="color:#f2c94c">KITA</span></h2></div>
         <nav class="nav">
             <a href="#">Utama</a>
-            <a href="#">Produk</a>
+            <a href="#produk">Menu</a>
             <a href="#">Hubungi</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Siakap Segar & Premium</h1>
-        <p>Dari kolam terus ke dapur anda. Dijamin segar, bersih, dan dihantar sejuk.</p>
-        <a href="#produk" class="btn-main">Pesan Sekarang</a>
-    </section>
-
-    <section class="features">
-        <div class="feature-box">
-            <h3>❄️ Segar Harian</h3>
-            <p>Ikan ditangkap pagi dan dihantar terus. Tiada stok lama.</p>
-        </div>
-        <div class="feature-box">
-            <h3>🔪 Siap Siang</h3>
-            <p>Kami buang sisik, perut, dan insang secara percuma.</p>
-        </div>
-        <div class="feature-box">
-            <h3>🚚 Penghantaran Cepat</h3>
-            <p>Kekal segar dengan kotak berpendingin.</p>
-        </div>
+        <h1>Raja Siakap Segar</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Isi manis, tekstur lembut, gerenti puas hati.</p>
+        <a href="#produk" class="btn-main">Lihat Pilihan</a>
     </section>
 
     <section class="products" id="produk">
-        <h2>Pilihan Popular</h2>
+        <h2>Stok Terkini</h2>
         <div class="product-grid">
             
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1535232770281-7928d3e2db78?auto=format&fit=crop&w=500&q=60" alt="Siakap Segar">
+                <img src="https://i.ibb.co/RpnsWzNn/download-2.jpg" alt="Siakap Segar">
                 <div class="card-content">
                     <h3>Siakap Segar (Whole)</h3>
                     <span class="price">RM 18.00 / ekor</span>
-                    <p style="font-size: 0.9rem; margin-bottom: 20px; color: #666;">Berat: 700g - 800g. Siap siang dan cuci bersih.</p>
-                    <a href="https://wa.me/60123456789?text=Saya%20nak%20order%20Siakap%20Segar" class="btn-card">Beli Melalui WhatsApp</a>
+                    <p style="font-size: 0.9rem; color: #666;">Berat: 800g - 1kg. Mata jernih, insang merah. Siap siang & cuci.</p>
+                    <a href="https://wa.me/60123456789?text=Nak%20Siakap%20Segar" class="btn-card">Order WhatsApp</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="https://plus.unsplash.com/premium_photo-1673100867018-86d754fa2f88?auto=format&fit=crop&w=500&q=60" alt="Siakap Fillet">
+                <img src="https://i.ibb.co/39Sk8zTR/download-1.jpg" alt="Fillet Siakap">
                 <div class="card-content">
-                    <h3>Siakap Fillet</h3>
+                    <h3>Siakap Fillet (Boneless)</h3>
                     <span class="price">RM 25.00 / pek</span>
-                    <p style="font-size: 0.9rem; margin-bottom: 20px; color: #666;">Berat: 500g. Tanpa tulang (*Boneless*). Isi putih lembut.</p>
-                    <a href="https://wa.me/60123456789?text=Saya%20nak%20order%20Siakap%20Fillet" class="btn-card">Beli Melalui WhatsApp</a>
+                    <p style="font-size: 0.9rem; color: #666;">Berat: 500g. Isi putih bersih tanpa tulang. Sesuai untuk Fish & Chips.</p>
+                    <a href="https://wa.me/60123456789?text=Nak%20Siakap%20Fillet" class="btn-card">Order WhatsApp</a>
                 </div>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1621852004158-b3976c969a34?auto=format&fit=crop&w=500&q=60" alt="Siakap Masak">
+                <img src="https://i.ibb.co/4R5rz7L7/download.jpg" alt="Siakap Stim">
                 <div class="card-content">
-                    <h3>Pakej Combo Masak</h3>
-                    <span class="price">RM 30.00 / set</span>
-                    <p style="font-size: 0.9rem; margin-bottom: 20px; color: #666;">1 Ekor Siakap + Pes Masak Tiga Rasa *Homemade*.</p>
-                    <a href="https://wa.me/60123456789?text=Saya%20nak%20order%20Combo%20Set" class="btn-card">Beli Melalui WhatsApp</a>
+                    <h3>Set Siakap Stim Limau</h3>
+                    <span class="price">RM 35.00 / set</span>
+                    <p style="font-size: 0.9rem; color: #666;">Pakej Lengkap: Ikan Siakap + Pes Stim Limau Thai *Authentic*.</p>
+                    <a href="https://wa.me/60123456789?text=Nak%20Set%20Stim" class="btn-card">Order WhatsApp</a>
                 </div>
             </div>
 
@@ -126,7 +126,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Siakap Express Enterprise. Hak Cipta Terpelihara.</p>
+        <p>&copy; 2025 Perniagaan Siakap Kita. Penghantaran Seluruh KL & Selangor.</p>
     </footer>
 
 </body>
